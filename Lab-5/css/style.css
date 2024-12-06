@@ -1,0 +1,203 @@
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    margin: 0;
+    color: #fefefe;
+    letter-spacing: 3px;
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 45px;
+    letter-spacing: 3px;
+    margin-top: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    background-color: #002C63;
+}
+
+header div {
+    height: 100%;
+}
+
+header img {
+    width: auto;
+    height: 100%;
+}
+
+header menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 30px;
+}
+
+header menu > li:first-child {
+    border-right: 1px solid #fefefe;
+}
+
+header a {
+    padding: 20px;
+    color: #fefefe;
+}
+
+#masthead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(#00000080, #00000080), url('../img/4.jpg');
+    background-position: center;
+    background-size: cover;
+    height: calc(100vh - 100px);
+}
+
+#masthead div {
+    position: absolute;
+    bottom: 40px;
+}
+
+#masthead div span {
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #fefefe;
+}
+
+#masthead div span:first-child {
+    transform: translateX(-40%) rotate(45deg);
+}
+
+#masthead:hover div span:first-child {
+    animation: arrowLeft 2s ease infinite;
+}
+
+#masthead div span:last-child {
+    transform: translate(40%, -2px) rotate(-45deg);
+}
+
+#masthead:hover div span:last-child {
+    animation: arrowRight 2s ease infinite;
+}
+
+#title {
+    background-color: #002C63;
+    color: #fefefe;
+    padding: 50px 100px;
+    text-align: center;
+}
+
+#media {
+    background-color: #002C63;
+}
+
+#media img {
+    width: 100%;
+    height: auto;
+}
+
+#media > div {
+    display: flex;
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 50% 20%);
+}
+
+#media div p {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    padding: 30px;
+    color: #fefefe;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+#media div div {
+    width: 50%;
+    position: relative;
+}
+
+#media div div:hover img {
+    filter: blur(3px);
+}
+
+#media div div:hover p {
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+#contactUs {
+    background-color: #50AE9D;
+    padding: 50px;
+    text-align: center;
+    color: #fefefe;
+}
+
+#contactUs a {
+    padding: 20px 35px;
+    border: 1px solid #fefefe;
+    font-size: 21px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #0e0e0e;
+    color: #fefefe;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+@keyframes arrowLeft {
+    0% {
+        width: 0
+    }
+
+    25% {
+        width: 40px;
+    }
+
+    50% {
+        transform: translate(-40%, 10px) rotate(45deg);
+    }
+
+    100% {
+        transform: translate(-40%, 0) rotate(45deg);
+    }
+}
+
+@keyframes arrowRight {
+    0% {
+        width: 0
+    }
+
+    25% {
+        width: 40px;
+    }
+
+    50% {
+        transform: translate(40%, 8px) rotate(-45deg);
+    }
+
+    100% {
+        transform: translate(40%, -2px) rotate(-45deg);
+    }
+}
